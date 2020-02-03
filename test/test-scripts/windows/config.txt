@@ -1,0 +1,18 @@
+[GWConfig]
+processMode=7
+reportMode= 0
+fileToFileMode=0
+fileType=doc
+inputLocation=..\..\test\test-data\1D-Archives
+useSubfolders=1
+
+outputLocation=..\..\test\test-output\1D_Archive
+createOutputFolders=1
+nonConformingDirName= NonConforming
+managedDirName= Managed
+
+quarantineNonconforming= 1
+writeOutput= 1
+
+logFileSize=1
+logFileProcessTime=1
