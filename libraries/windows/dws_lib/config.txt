@@ -1,0 +1,19 @@
+[GWConfig]
+processMode                 = 8
+reportMode                  = 0
+fileToFileMode              = 0
+fileType                    = docx
+inputLocation               = ..\..\..\test\test-data\1B-Word_Search
+useSubfolders               = 1
+
+outputLocation              = ..\..\..\test\test-output\1B
+createOutputFolders         = 1
+nonConformingDirName        = NonConforming
+managedDirName              = Managed
+
+writeOutput                 = 1
+
+logFileSize                 = 0
+logFileProcessTime          = 1
+
+pathToHomoglyphs	    = .\homoglyphs.json

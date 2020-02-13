@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+
+  <pdfConfig>    
+    <watermark>Glasswall Protected</watermark>
+    <acroform>sanitise</acroform>
+    <metadata>sanitise</metadata>
+    <javascript>sanitise</javascript>
+    <actions_all>sanitise</actions_all>
+    <embedded_files>sanitise</embedded_files>
+
+    <internal_hyperlinks>sanitise</internal_hyperlinks>
+    <external_hyperlinks>sanitise</external_hyperlinks>
+  </pdfConfig>
+  
+  <wordConfig>
+    <macros>sanitise</macros>
+    <metadata>sanitise</metadata>
+    <embedded_files>sanitise</embedded_files>
+
+    <review_comments>sanitise</review_comments>
+    <internal_hyperlinks>sanitise</internal_hyperlinks>
+    <external_hyperlinks>sanitise</external_hyperlinks>
+  </wordConfig>
+  
+  <pptConfig>
+    <macros>sanitise</macros>
+    <metadata>allow</metadata>
+    <embedded_files>allow</embedded_files>
+    <review_comments>allow</review_comments>
+    <internal_hyperlinks>allow</internal_hyperlinks>
+    <external_hyperlinks>allow</external_hyperlinks>
+  </pptConfig>
+  
+  <xlsConfig>
+    <macros>sanitise</macros>
+    <metadata>sanitise</metadata>
+    <embedded_files>sanitise</embedded_files>
+    <review_comments>sanitise</review_comments>
+    <internal_hyperlinks>sanitise</internal_hyperlinks>
+    <external_hyperlinks>sanitise</external_hyperlinks>
+  </xlsConfig>  
+  
+  <sysConfig>
+    <interchange_type>xml</interchange_type>
+    <interchange_pretty>true</interchange_pretty>
+  </sysConfig>
+
+  <textSearchConfig> <!-- Indicates the text search and redact properties. -->
+    <textList> <!-- List of <textItem> elements, where each <textItem> element indicates the text that is searched for and how it should be handled once found. -->
+      <textItem>
+        <text>Test</text> <!-- Indicates the text that we are searching for. In this case we are looking for the text "Test". -->
+        <textSetting replacementChar="*">redact</textSetting> <!-- Indicates how the text should be handled once it is found. In this case the text will be replaced with '*' characters. -->
+      </textItem>
+      <textItem>
+        <regex>He.+?World</regex> <!-- Indicates a regular expression that can be used when searching. -->
+        <textSetting replacementChar="!">redact</textSetting>
+      </textItem>
+    </textList>
+  </textSearchConfig>
+  
+
+</config>
