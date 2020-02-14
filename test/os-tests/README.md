@@ -22,7 +22,7 @@ python 2.7
 **Amazon Linux v2018.03**</br>
 python 2.7
 
-<h2>How to run Docker containers</h2>
+<h2>How to run the Docker containers</h2>
 
 1) To run the tests download the appropriate dfiles for that OS.
 2) Edit the "run.bat" file, specify the mount points for "input" and "output" locations.
