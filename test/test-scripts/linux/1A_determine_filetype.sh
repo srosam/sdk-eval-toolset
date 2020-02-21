@@ -24,3 +24,5 @@ ls "../../test/test-output/1A"
 echo "Open the output folder"
 xdg-open  "../../test/test-output/1A"
 read
+
+

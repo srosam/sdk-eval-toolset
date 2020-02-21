@@ -44,3 +44,4 @@ ls "../../test/test-output/G3"
 # --- Show ouput directory
 xdg-open "../../test/test-output/G3"
 
+

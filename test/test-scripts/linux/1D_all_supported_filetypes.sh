@@ -16,3 +16,5 @@ ls "../../test/test-output/1D"
 # --- Show ouput directory
 xdg-open "../../test/test-output/1D"
 read 
+
+

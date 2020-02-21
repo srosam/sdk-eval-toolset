@@ -19,4 +19,6 @@ ls "../../test/test-output/1D_Archive"
 # --- Show ouput directory
 echo "Open the output folder"
 xdg-open "../../test/test-output/1D_Archive"
-read 
+read
+
+
