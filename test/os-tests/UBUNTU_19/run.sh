@@ -1,4 +1,2 @@
-cd Python_Wrapper
-python3 PythonWrapperTestApp.py -w Python_Wrapper/Glasswall.py -i ../input -o ../output -c Config.xml -d ../libraries/libglasswall_core2.so
-
-
+#!/bin/bash
+python3 /home/glasswall/Python_Wrapper/PythonWrapperTestApp.py -w Python_Wrapper/Glasswall.py -i /home/glasswall/input -o /home/glasswall/output -c /home/glasswall/Python_Wrapper/Config.xml -d /home/glasswall/libraries/libglasswall_core2.so
