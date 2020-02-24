@@ -24,8 +24,6 @@ python 2.7
 
 <h2>How to run the Docker containers</h2>
 
-1) To run these tests download the appropriate dfiles for that OS.
-2) Edit the "run.bat" file, specify the mount points for "input" and "output" locations for the files you want to process(use absolute paths and not relative paths).
-3) Execute the "Run.bat" script. This opens the container in interactive mode.</br>
-4) Once inside container enter command "cd /home/glasswall"</br>
-5) Then enter "./run.sh"</br>
+1) To run these tests download the appropriate files for that OS.
+2) Execute the "Run.bat" script. This opens the container in interactive mode.</br>
+3) Once inside container enter command "/home/glasswall/run.sh"</br>
