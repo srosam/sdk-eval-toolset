@@ -1,17 +1,23 @@
 FROM glasswallsolutions/amazonlinuxbase:2016.09
+
+LABEL MAINTAINER="support@glasswallsolutions.com"
+
 RUN mkdir -p /home/glasswall/libraries/
 RUN mkdir -p /home/glasswall/Python_Wrapper/
-COPY ["Lib/*"              , "/home/glasswall/libraries/"]
-COPY ["Python_Wrapper/*"              , "/home/glasswall/Python_Wrapper/"]
-COPY ["run.sh"              , "/home/glasswall/"]
-RUN ln -s /home/glasswall/libraries/libglasswall_core2.so /usr/lib/libglasswall_core2.so.1
-RUN ln -s /home/glasswall/libraries/libQt5Concurrent.so /usr/lib/libQt5Concurrent.so.5
-RUN ln -s /home/glasswall/libraries/libQt5Core.so /usr/lib/libQt5Core.so.5
-RUN ln -s /home/glasswall/libraries/libquazip.so /usr/lib/libquazip.so.1
-RUN ln -s /home/glasswall/libraries/libQt5Xml.so /usr/lib/libQt5Xml.so.5
-RUN ln -s /home/glasswall/libraries/libicui18n.so /usr/lib/libicui18n.so.56
-RUN ln -s /home/glasswall/libraries/libicuuc.so /usr/lib/libicuuc.so.56
-RUN ln -s /home/glasswall/libraries/libicudata.so /usr/lib/libicudata.so.56
-RUN ln -s /home/glasswall/libraries/libQt5Gui.so /usr/lib/libQt5Gui.so.5
-RUN ldconfig
-RUN cd /home/glasswall
+
+COPY ["Lib/*"              , "/home/glasswall/libraries/"     ]
+COPY ["Python_Wrapper/*"   , "/home/glasswall/Python_Wrapper/"]
+COPY ["run.sh"             , "/home/glasswall/"               ]
+
+RUN ln -s /home/glasswall/libraries/libglasswall_core2.so /usr/lib/libglasswall_core2.so.1 && \
+    ln -s /home/glasswall/libraries/libQt5Concurrent.so /usr/lib/libQt5Concurrent.so.5 && \
+    ln -s /home/glasswall/libraries/libQt5Core.so /usr/lib/libQt5Core.so.5 && \
+    ln -s /home/glasswall/libraries/libquazip.so /usr/lib/libquazip.so.1 && \
+    ln -s /home/glasswall/libraries/libQt5Xml.so /usr/lib/libQt5Xml.so.5 && \
+    ln -s /home/glasswall/libraries/libicui18n.so /usr/lib/libicui18n.so.56 && \
+    ln -s /home/glasswall/libraries/libicuuc.so /usr/lib/libicuuc.so.56 && \
+    ln -s /home/glasswall/libraries/libicudata.so /usr/lib/libicudata.so.56 && \
+    ln -s /home/glasswall/libraries/libQt5Gui.so /usr/lib/libQt5Gui.so.5 &&\
+    ldconfig
+	
+WORKDIR /home/glasswall
